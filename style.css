@@ -1,13 +1,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body{
+
+body {
     background: #ffffff;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: #4b0081 solid 2px;
+    box-shadow: 0 0 10px #4b0081;
+}
+
+header img {
+    width: 3%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #39d453;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #4b0081;
+    transition: 0.3s ease;
+    text-shadow: 0 0 10px #4b0081;
+}
+
+nav button {
+    width: 130px;
+    padding: 10px 20px;
+    background: #39d453;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4b0081;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #4b0081;
+}
+
+header .fa-solid {
+    display: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+section img {
+    width: 30%;
+    object-fit: cover;
+}
+
+section img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+article {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    margin-bottom: 10%;
+}
+
+
+svg {
+    font-family: "Russo One", sans-serif;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #4B0081;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(57, 212, 83, 0);
+        stroke: rgba(75, 0, 129, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(57, 212, 83, 0);
+        stroke: rgba(75, 0, 129, 1);
+    }
+
+    80% {
+        fill: rgba(57, 212, 83, 0);
+        stroke: rgba(75, 0, 129, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(57, 212, 83, 1);
+        stroke: rgba(75, 0, 129, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+article p {
+    font-size: 1rem;
+    color: #39d453;
+    letter-spacing: 2px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+article p strong {
+    color: #4b0081;
+    font-weight: bold;
+}
+
+article button {
+    width: 150px;
+    padding: 10px 20px;
+    background: #39d453;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Aplicando Midia Query*/
+@media (max-width: 768px) {
+
+
+    header .fa-solid {
+        display: block;
+        color: #4B0081;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    header .fa-solid:hover {
+        color: #39d453;
+        transition: 0.3s ease;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul a {
+        padding: 10px 20px;
+    }
+
+    nav ul button {
+        margin-top: 10px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section img {
+        width: 80%;
+    }
+
+    article {
+        width: 100%;
+        height: auto;
+    }
 }

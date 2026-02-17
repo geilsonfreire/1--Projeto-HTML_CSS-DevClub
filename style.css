@@ -239,6 +239,21 @@ article button {
 }
 
 @media (max-width: 480px) {
+    section {
+        gap: 0;
+    }
+
+    section img {
+        width: 70%;
+    }
+
+    article {
+        width: 100%;
+        height: auto;
+        gap: 1%;
+        margin-bottom: 1%;
+    }
+
     svg text {
         font-size: 2.5rem;
     }
